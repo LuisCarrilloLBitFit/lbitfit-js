@@ -1,0 +1,621 @@
+/*** Importación Google Fonts ***/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*** Definir variables colores ***/
+:root{
+    --blue: #1B0698;
+    --gray: #F8F9FA;
+    --azure: #f0ffff;
+    --white: #ffffff;
+    --sombras: rgb(209, 206, 206);
+}
+/*** CSS reset ***/
+body{
+    margin: auto;
+    padding: 0%;
+    box-sizing: content-box;
+}
+
+/*** Definir estilos flecha arriba ***/
+.flecha-arriba {
+  font-size: 2rem;
+  display: inline-block;
+  width: 72px;
+  height: 80px;
+}
+
+/********** Página Inicio **********/
+
+/***Menú de navegación***/
+/* Botón de Buscar */
+.btn-search{
+    background-color: var(--blue);
+}
+
+/*** Main ***/
+/** bloque-presentacion **/
+.bloque-presentacion{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.presentacion-text{
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+}
+
+.presentacion-text h2{
+    color: var(--blue);
+}
+
+.presentacion-img{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 40%;
+}
+
+.presentacion-img-int img{
+    width: 100%;
+    height: 320px;
+    margin-top: 20px;
+    margin-left: 10px;
+    opacity: .8;
+}
+
+.bloque-noticias{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticias-encabezado h2{
+    text-align: center;
+}
+
+.noticias-encabezado h2, h5{
+    color: var(--blue);
+}
+
+/*** Descarga JSON ***/
+/*Caja descarga JSON*/
+.noticias-json {
+  margin-top: 15px;
+  height: 20vh;
+  max-height: 20vh;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.bloque-boton{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+
+/*** Bloque Portfolio ***/
+.bloque-portfolio{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.portfolio-encabezado{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-encabezado h2{
+    color: var(--blue);
+}
+
+.portfolio-encabezado .encabezado-link{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/** Tabla imágenes **/
+.container{
+    margin-top: 20px;
+}
+
+.row{
+    margin-top: 10px;
+    min-height: 20vh;
+}
+
+/* Tamaño imágenes tabla */
+.img-portfolio{
+    width: 60%;
+    max-height: 45%; 
+}
+
+/*** Servicios de Marketing ***/
+.bloque-marketing{
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.marketing-encabezado{
+    margin-top: 10px;
+    background-color: var(--gray);
+    text-align: center;
+    padding: 30px;
+    color: var(--blue);
+    min-height: 20vh;
+}
+
+.marketing-description{
+    width: 50%;
+    margin: 15px;
+    padding: 50px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 4px var(--sombras);
+    align-self: center;
+
+}
+
+/*** Bloque contacto ***/
+.bloque-contacto{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-encabezado{
+    color: var(--blue);
+    text-align: center;
+    align-self: center;
+}
+
+/** Bloque contacto formulario **/
+.contacto-form{
+    margin-top: 15px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*input*/
+.input-name{
+    margin-left: 10px;
+}
+
+.input-email{
+    margin: 5px 15px;
+}
+/*Botón*/
+.contacto-boton{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+
+.boton-index{
+    margin-top: 15px;
+    background-color: var(--blue);
+    color: var(--azure);
+    border: none;
+    border-radius: 3px;
+    height: 42px;
+    width: 82px;
+}
+
+/* Imagen ir hacía arriba */
+.bloque-flechaarriba span{
+    color: var(--blue);
+    margin-left: 10px;
+}
+
+/*** Footer ***/
+footer{
+    background-color: var(--blue);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.container p, .container h5, .container a{
+    color: var(--azure);
+}
+
+/* Caja Redes sociales */
+.footer-container-rrss{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-container-rrss img{
+    width: 48px;
+    height: 48px;
+    margin-left: 15px;
+    border-radius: 8px;
+    transition: opacity 2s ease .3s;
+}
+
+.footer-container-rrss img:hover{
+    opacity: 0.33;
+}
+
+/* Política de seguridad y Condiciones de uso */
+.footer-container-politicas ul li{
+    list-style: none;
+}
+
+.footer-container-politicas ul li a{
+    text-decoration: none;
+}
+
+.footer-container-datoscontacto{
+    color: var(--azure);
+}
+
+/********** Página Servicios **********/
+/* Card de nuestros servicios */
+.bloque-servicios{
+    margin-top: 20px;
+    color: var(--blue);
+    text-align: center;
+}
+
+/*** Datos a tener en cuenta sobre la empresa ***/
+/** Contenedor de cajas **/
+.container-datos{
+    margin-top: 20px;
+    min-height: 30vh;
+    background-color: var(--gray);
+    box-shadow: 2px 2px 2px 4px var(--sombras);
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*caja 1*/
+.datos-proyectos{
+    width: 40%;
+    height: 31%;
+    background-color: var(--blue);
+    color: var(--sombras);
+    margin-left: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.datos-proyectos h5{
+    color: var(--azure);
+    text-align: center;
+}
+
+/* caja 2 */
+.datos-clientes{
+    width: 40%;
+    height: 31%;
+    background-color: var(--blue);
+    color: var(--sombras);
+    margin-left: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.datos-clientes h5{
+    color: var(--azure);
+}
+
+/* caja 3 */
+.datos-miembros{
+    width: 40%;
+    height: 31%;
+    background-color: var(--blue);
+    color: var(--sombras);
+    margin-left: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.datos-miembros h5{
+    color: var(--azure);
+}
+
+/* caja 4 */
+.datos-presencia{
+    width: 65%;
+    height: 31%;
+    background-color: var(--blue);
+    color: var(--sombras);
+    margin-left: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.datos-presencia h5{
+    color: var(--azure);
+    align-self: center;
+}
+
+/* Servicio de Marketing */
+.container-marketing{
+    margin-top: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    width: 100%;
+    color: var(--blue);
+}
+
+/* Caja imagen */
+.marketing-img{
+    margin-top: 10px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.marketing-img img{
+    height: 500px;
+    min-width: 100%;
+}
+
+/* Contenedor último texto página */
+.container-frase{
+    margin-top: 20px;
+    color: var(--blue);
+    text-align: center;
+}
+
+/********** Página Presupuesto **********/
+/* Caja Título */
+.cajaSubti_presup{
+    color: var(--blue);
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Caja del formulario */
+.cuerpo_presup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 75px;
+  }
+
+/* Estilos caja del formulario */
+.form_presup {
+    background-color: var(--white);
+    width: 500px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  }
+
+  /* Estilos de los inputs */
+.input {
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+  }
+
+  .input1{
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    margin-bottom: 10px;
+  }
+
+  input[type='checkbox']{
+    border-radius: 7px;
+    border: 1px solid #DADCE0;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    background: none;
+  }
+
+  /* Estilos botón */
+  .submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  
+  .submitBtn:hover {
+    background-color: #9867C5;
+    transform: translateY(-2px);
+  }
+
+/* Quitar subrayado enlaces políticas */
+.politicas{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+/********** Página Contacto **********/
+/*Caja Mapa*/
+.title-map{
+    margin-top: 15px;
+}
+
+.title-map h2{
+    color: var(--blue);
+    text-align: center;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+
+/********** Página Galería **********/
+/** Caja lightbox **/
+ .container-marketing{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 100vh;
+    width: 80%;
+ }
+
+/* Caja imagen lightbox */
+.marketing-lightbox{
+    margin-top: 15px;
+}
+
+/* estilo de nuestras vistas previas aquí */
+.preview {
+    width: 100%;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .row > .col-1 {
+    margin-top: 15px;
+    padding: 0 8px;
+  }
+  
+  .col-1 {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+
+  .col-1 img{
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+  }
+
+  /* definir cómo se verá el cuadro de luz */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 85%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0 0 0 0;
+    width: 65%;
+    max-width: 900px;
+  }
+
+  /* Estilos del Slider */
+  .slide {
+    display: none;
+  }
+  
+  .image-slide {
+    width: 100%;
+  }
+  
+  .modal-preview {
+    width: 100%;
+  }
+  
+  .dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+  }
+
+  img.preview, img.modal-preview {
+    opacity: 0.6;
+  }
+  
+  img.active,
+  .preview:hover,
+  .modal-preview:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  } 
+  
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .previous,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .previous:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }

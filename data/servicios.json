@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Desarrollo de Software a Medida",
+    "descripcion": "Creamos aplicaciones personalizadas según las necesidades del cliente.",
+    "precio": "Desde 1500€"
+  },
+  {
+    "nombre": "Consultoría en Ciberseguridad",
+    "descripcion": "Análisis de vulnerabilidades y protección de datos.",
+    "precio": "Desde 800€"
+  },
+  {
+    "nombre": "Soporte Técnico Remoto",
+    "descripcion": "Asistencia técnica inmediata vía remota.",
+    "precio": "Desde 30€/hora"
+  },
+  {
+    "nombre": "Mantenimiento de Redes",
+    "descripcion": "Configuración y mantenimiento de redes corporativas.",
+    "precio": "Desde 500€/mes"
+  }
+]
