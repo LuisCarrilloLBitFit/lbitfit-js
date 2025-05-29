@@ -43,7 +43,7 @@
               <a class="nav-link" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="presupuesto.html" tabindex="-1" aria-disabled="true">Presupuesto</a>
+              <a class="nav-link active" href="presupuesto.html" tabindex="-1">Presupuesto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contacto.html">Contacto</a>
@@ -66,7 +66,7 @@
     <!--Formulario-->
     <div class="cuerpo_presup">
       <form method="get" name="formulario" class="form_presup">
-        <legend>Datos</legend>
+        <label>Datos</label>
         Nombre: <input type="text" name="name" id="name-pre" placeholder="Escriba aquí su nombre" class="input"><span
           id="text-name"></span><br>
         Apellidos: <input type="text" name="lastname" id="lastname-pre" placeholder="Escriba aquí su apellido"
@@ -76,7 +76,7 @@
         Email: <input type="email" name="emai1" id="email-pre" placeholder="Escriba aquí su correo electrónico"
           class="input"><span id="text-email"></span><br>
 
-        <legend>Presupuesto</legend>
+        <label>Presupuesto</label>
         Elige un producto: <select name="select" id="sel" class="input1">
           <option value="">--------</option>
           <option value="Desarollo web">Desarollo web</option>
@@ -91,7 +91,7 @@
         Migración <input type="checkbox" name="producto3" id="producto3">
         Seguridad <input type="checkbox" name="producto4" id="producto4"><br>
 
-        <legend>Aceptación Condiciones y envío de presupuesto</legend>
+        <label>Aceptación Condiciones y envío de presupuesto</label>
         He leído <a
           href="https://www.cookiebot.com/es/politica-de-privacidad-para-mi-web/?gclid=Cj0KCQiAw9qOBhC-ARIsAG-rdn7eFB0uF-Z06rptEvOMSBsaUF58UgCM88V-9q9cKSHSIlefdiMToxMaAhZUEALw_wcB"
           target="_blank" rel="noopener noreferrer" class="politicas">Políticas de privacidad</a> y <a
@@ -102,6 +102,7 @@
 
       </form>
     </div>
+    <p id="precio-total" style="font-weight: bold; margin-top: 10px;">Precio estimado: 0 €</p>
     <!-- Imagen ir hacía arriba -->
     <div class="bloque-flechaarriba">
       <a href="#"><span class="flecha-arriba">🠕</span></a>

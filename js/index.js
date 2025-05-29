@@ -336,6 +336,41 @@ function calcularPresupuesto() {
   alert("El presupuesto estimado es: " + total.toFixed(2) + " €");
 }
 
+// Actualizar automáticamente el presupuesto sin validar ni mostrar alertas
+function actualizarPresupuesto() {
+  const producto = document.getElementById("sel").value;
+  const plazo = parseInt(document.getElementById("plazos").value);
+  let total = 0;
+
+  if (!preciosProductos[producto]) {
+    document.getElementById("precio-total").innerText = "Selecciona un producto";
+    return;
+  }
+
+  total += preciosProductos[producto];
+
+  for (let extra in precioExtras) {
+    if (document.getElementById(extra).checked) {
+      total += precioExtras[extra];
+    }
+  }
+
+  if (!isNaN(plazo)) {
+    if (plazo <= 1) {
+      total *= 1.2;
+    } else if (plazo <= 3) {
+      total *= 1;
+    } else if (plazo <= 6) {
+      total *= 0.95;
+    } else {
+      total *= 0.90;
+    }
+  }
+
+  document.getElementById("precio-total").innerText = "Precio estimado: " + total.toFixed(2) + " €";
+}
+
+
 // Agregar evento al botón de envío
 window.addEventListener("DOMContentLoaded", function () {
   const btnPresupuesto = document.getElementById("submit-Btn");
@@ -346,14 +381,24 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // Escuchar cambios en el producto, plazos y extras
+  document.getElementById("sel").addEventListener("change", actualizarPresupuesto);
+  document.getElementById("plazos").addEventListener("change", actualizarPresupuesto);
+
+  for (let extra in precioExtras) {
+    const checkbox = document.getElementById(extra);
+    if (checkbox) {
+      checkbox.addEventListener("change", actualizarPresupuesto);
+    }
+  }
 });
 
 /******** Página Contacto ********/
 // Coordenadas de Plaza de la Azucena, Leganés
 document.addEventListener("DOMContentLoaded", function () {
-
-  console.log("JS cargado");
   
+  // Ejemplo de ubicación de la empresa
   const lat = 40.33122;
   const lng = -3.76613;
 
@@ -368,8 +413,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // Añadir un marcador con popup
-  L.marker([lat, lng])
+  const empresaMarcador = L.marker([lat, lng])
     .addTo(map)
     .bindPopup('Plaza de la Azucena, Leganés')
     .openPopup();
+
+  //ubicación del visitante
+    if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const userLat = position.coords.latitude;
+        const userLng = position.coords.longitude;
+
+        // Marcador para el visitante
+        const visitanteMarker = L.marker([userLat, userLng])
+          .addTo(map)
+          .bindPopup("📍 Tu ubicación")
+          .openPopup();
+
+        // Dibujar la ruta entre visitante y empresa
+        L.Routing.control({
+          waypoints: [
+            L.latLng(userLat, userLng),
+            L.latLng(lat, lng),
+          ],
+          routeWhileDragging: false,
+          show: false,
+          addWaypoints: false,
+        }).addTo(map);
+      },
+      function (error) {
+        console.error("Error al obtener ubicación del visitante:", error.message);
+      }
+    );
+  } else {
+    console.warn("Geolocalización no disponible en este navegador.");
+  }
 });
